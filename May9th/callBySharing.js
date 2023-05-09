@@ -7,7 +7,8 @@ const changeStuff = (a, b, c) => {
 	a = a * 10; //Primitive type, passed by copy
 	console.log(a); //This is inside the function, it will be changed
 	b.firstName = 'ALICE'; //Reference type, updates are propagted
-	c = { firstName: 'Charle' }; //Reference type: New creations are not propagated
+	c = { firstName: 'Charles' }; //Reference type: New creations are not propagated
+	console.log(c.firstName);
 };
 
 changeStuff(num, person1, person2);
