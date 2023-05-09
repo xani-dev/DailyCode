@@ -16,3 +16,5 @@ changeStuff(num, person1, person2);
 console.log(num); //num is now outside of the function's scope, the change won't persist
 console.log(person1.firstName);
 console.log(person2.firstName);
+
+//ss
