@@ -22,20 +22,19 @@ const ifExample = () => {
 ifExample();
 
 const switchExample = () => {
-    let firstName = 'Xani'
+	let firstName = 'Xani';
 
-    switch (firstName) {
-        case'Joe':
-        console.log('Hello Joe')
-        break;
+	switch (firstName) {
+		case 'Joe':
+			console.log('Hello Joe');
+			break;
 
-        case 'Fred':
-        console.log('Hello Fred')
-        break
-        default:
-        console.log('Hello Stranger!')
-        
-    }
-}
+		case 'Fred':
+			console.log('Hello Fred');
+			break;
+		default:
+			console.log('Hello Stranger!');
+	}
+};
 
 switchExample();
