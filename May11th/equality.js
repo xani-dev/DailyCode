@@ -9,7 +9,7 @@ const main = () => {
 	};
 	let p3 = p2;
 
-// Line to demonstrate p1 and p2 aren't equal
+// Line to demonstrate p1 and p2 aren't equa
 	if (p1 == p2) {
 		console.log('here');
 	}
