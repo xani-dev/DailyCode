@@ -20,10 +20,10 @@ const myAsyncAwait = async () => {
 		console.log(err);
 	}
 
-	// Example from video about Uber Ride
+	// GREAT Example from video about Uber Ride
 
 	const ride = new Promise((resolve, reject) => {
-        let arrived = false;
+		let arrived = false;
 		if (arrived) {
 			resolve('driver has arrived 🏎️');
 		} else {
@@ -31,7 +31,10 @@ const myAsyncAwait = async () => {
 		}
 	});
 
-	ride.then((value) => console.log(value)).catch((error) => console.log(error)).finally(()=>console.log('completed!'));
+	ride
+		.then((value) => console.log(value))
+		.catch((error) => console.log(error))
+		.finally(() => console.log('completed!'));
 };
 
 myAsyncAwait();
