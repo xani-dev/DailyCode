@@ -1,8 +1,15 @@
-* {
+body {
   margin: 0px;
   padding: 0px;
+  background-color:rgb(228, 225, 221);
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
 }
 
 .App {
-  background-color: gray;
+  background-color: lightpink;
+  
+}
+
+h1 {
+  color: dimgrey;
 }

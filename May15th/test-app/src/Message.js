@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export const Message = () => {
-  return (
-    <div>I'm alive, I'm alert, I feel great!</div>
-  )
-}
+	return <h1>I'm alive, <br></br>I'm alert, <br></br> I feel great!</h1>;
+};
