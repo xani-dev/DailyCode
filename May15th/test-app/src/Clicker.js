@@ -1,22 +1,18 @@
 import React from 'react';
 
-export const Clicker = ({ message }) => {
-	const handleClick = () => {
-		console.log(message);
-	};
-
+export const Clicker = ({ onClicked }) => {
 	return (
 		<div>
 			<button
 				onClick={() => {
-					handleClick(message='up');
+					onClicked('up');
 				}}
 			>
 				Up
 			</button>
 			<button
 				onClick={() => {
-					handleClick(message='down');
+					onClicked('down');
 				}}
 			>
 				Down
