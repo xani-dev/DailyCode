@@ -5,17 +5,17 @@ export const Clicker = ({ onClicked }) => {
 		<div>
 			<button
 				onClick={() => {
-					onClicked('up');
+					onClicked('Up');
 				}}
 			>
-				Up
+				Count Up
 			</button>
 			<button
 				onClick={() => {
-					onClicked('down');
+					onClicked('Down');
 				}}
 			>
-				Down
+				Count Down
 			</button>
 		</div>
 	);

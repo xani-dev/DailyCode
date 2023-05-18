@@ -6,8 +6,13 @@ body {
 }
 
 .App {
-  background-color: lightpink;
-  
+  background-color: rgb(253, 191, 202);
+  display: block;
+  width: 60vw;
+  height: 60vh;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
 }
 
 h1 {
@@ -17,7 +22,8 @@ h1 {
 button {
   background-color: rgb(162, 212, 241);
   font-size: 20px;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   border: 2px solid lightpink;
+  margin: 5px
 }
