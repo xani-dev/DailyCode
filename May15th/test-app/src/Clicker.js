@@ -17,6 +17,12 @@ export const Clicker = ({ onClicked }) => {
 			>
 				Count Down
 			</button>
+
+			<button
+			onClick={()=>{
+				onClicked('Reset');
+			}}
+			>Reset</button>
 		</div>
 	);
 };

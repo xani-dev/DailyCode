@@ -4,17 +4,18 @@ import { Clicker } from './Clicker';
 import { Message } from './Message';
 
 function App() {
-
-	let[counter, setCounter]= useState(0);
+	let [counter, setCounter] = useState(0);
 
 	const onHandleClick = (direction) => {
-		if (direction === 'Up'){
-			setCounter(++counter)
+		if (direction === 'Up') {
+			setCounter(++counter);
+		} else if (direction === 'Down') {
+			setCounter(--counter);
 		} else {
-			setCounter(--counter)
+			setCounter((counter = 0));
 		}
-		console.log(direction)
-	}
+		console.log(direction);
+	};
 
 	return (
 		<div className='App'>
