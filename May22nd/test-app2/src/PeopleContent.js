@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { People } from './People';
 
-
 export const PeopleContent = () => {
 	const [show, setShow] = useState(true);
 
@@ -26,6 +25,8 @@ export const PeopleContent = () => {
 				</button>
 				{show && <People data={userList} />}
 			</div>
+			<br />
+			<div>...bye, People</div>
 		</>
 	);
 };

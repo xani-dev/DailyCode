@@ -30,8 +30,7 @@ export const People = ({ data }) => {
 					</tbody>
 				</table>
 			</div>
-			<br />
-			<div>...bye, People</div>
+			
 		</>
 	);
 };
