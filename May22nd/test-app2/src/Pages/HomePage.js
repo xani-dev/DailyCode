@@ -1,5 +1,5 @@
 import React from "react";
-import { PeopleContent } from "../PeopleContent";
+import { PeopleContent } from "../Components/PeopleContent";
 
 export const HomePage = () => {
     return(

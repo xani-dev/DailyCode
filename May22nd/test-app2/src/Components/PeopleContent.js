@@ -23,6 +23,7 @@ export const PeopleContent = () => {
 				<button onClick={() => handleClick()}>
 					{show ? 'Hide Table' : 'Show Table'}
 				</button>
+				{/* Short Circuiting the line below */}
 				{show && <People data={userList} />}
 			</div>
 			<br />
