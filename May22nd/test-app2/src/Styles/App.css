@@ -14,11 +14,16 @@
 }
 
 .navBar {
-  color: #282c34;
+  background-color: #282c34;
+  color: antiquewhite;
   border: .5px dotted darkgray;
-  display: flex;
+  display:flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px;
+}
+
+a {
+	color: antiquewhite;
 }
 
 table {
