@@ -1,0 +1,21 @@
+.square {
+	font-size: larger;
+	background: rgb(238, 197, 251);
+	background: radial-gradient(
+		circle,
+		rgba(238, 197, 251, 0.9975247524752475) 0%,
+		rgba(2, 1, 43, 1) 100%
+	);
+
+	width: 50%;
+	height: 0;
+	padding-top: 50%;
+	margin: 25%;
+	position: relative;
+}
+
+.content {
+	position: absolute;
+	top: 45%;
+	left: 40%;
+}
