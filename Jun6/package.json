@@ -1,0 +1,15 @@
+{
+  "name": "node-module",
+  "version": "1.0.0",
+  "description": "Node Module Practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "the pink dev",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
