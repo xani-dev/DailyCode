@@ -1,4 +1,9 @@
-const _ = require('lodash');
+
+// Common JS module
+// const _ = require('lodash');
+
+//ES Module
+import _ from 'lodash'
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const arrChunks = _.chunk(arr, 3);

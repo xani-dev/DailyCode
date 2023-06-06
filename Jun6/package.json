@@ -1,5 +1,6 @@
 {
   "name": "node-module",
+  "type": "module",
   "version": "1.0.0",
   "description": "Node Module Practice",
   "main": "index.js",
