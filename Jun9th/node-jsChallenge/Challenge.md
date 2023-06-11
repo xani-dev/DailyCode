@@ -31,16 +31,16 @@ This document provides guidelines to help you achieve the following objectives i
 
 ## Objective 3: Serving static assets
 
-1. Create a folder named `public` in the root of your project directory.
-2. Place the provided index.html and style.css files inside `public` folder
-3. In `server.js` use the `express.static()` middleware to serve static assets from the `public` folder.
+1. ~~Create a folder named `public` in the root of your project directory~~.
+2. ~~Place the provided index.html and style.css files inside `public` folder~~
+3. ~~In `server.js` use the `express.static()` middleware to serve static assets from the `public` folder.~~
 
 ## Objective 4: Error handling
 
-1. Implement error handling middleware functions to handle errors that may occur within the route handlers.
- - You can take any approach you like: try-catch blocks, conditional rendering or using the 4 parameter approach noted below:
- - Note: Error handling middleware functions can have four parameters `(err, req, res, next)`, not just `(req, res)`.
-3. Check for errors within each middleware function and handle them appropriately. For example, you can send error responses using `res.status()` and `res.send()`.
+1. ~~Implement error handling middleware functions to handle errors that may occur within the route handlers.~~
+ - ~~You can take any approach you like: try-catch blocks, conditional rendering or using the 4 parameter approach noted below:~~
+ - ~~Note: Error handling middleware functions can have four parameters `(err, req, res, next)`, not just `(req, res)`.~~
+3. ~~Check for errors within each middleware function and handle them appropriately. For example, you can send error responses using `res.status()` and `res.send()`~~.
 4. BONUS: Use the `app.use()` method to define a GLOBAL ERROR HANDLER middleware functions AFTER defining the routes.
 
 ---

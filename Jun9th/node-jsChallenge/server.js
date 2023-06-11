@@ -14,7 +14,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Route Handlers
+// Route Handlers/ Endpoinds
+
 // app.get()
 app.get('/users/:id', cors(corsOptions), async (req, res) => {
 	const userId = req.params['id'];
@@ -26,13 +27,14 @@ app.get('/users/:id', cors(corsOptions), async (req, res) => {
 	body ? res.send(body) : res.status(404).send({ message: 'User Not Found' });
 });
 
-app.get('/users', cors(corsOptions), async (req, res) => {
-	const {name, age} = req.query;
+app.get('/users/:name/:age', cors(corsOptions), async (req, res) => {
+	console.log('Request by NAME && AGE');
+	const {name, age} = req.params;
 	const [response] = await dbconnection.query(
 		` SELECT * FROM users WHERE name = ? AND age = ? `,
 		[name, age]
 	);
-    console.log(response)
+	console.log(response);
 	const body = response[0];
 	body ? res.send(body) : res.status(404).send({ message: 'User Not Found' });
 });
@@ -60,7 +62,7 @@ app.post('/users', cors(corsOptions), async (req, res) => {
 
 // app.put()
 app.put('/users/:id', cors(corsOptions), async (req, res) => {
-      let id = req.params['id'];
+	let id = req.params['id'];
 	const { name, age, followers, verified, country } = req.body;
 
 	const [updateUser] = await dbconnection.query(
@@ -68,7 +70,7 @@ app.put('/users/:id', cors(corsOptions), async (req, res) => {
 		[name, age, followers, verified, country, id]
 	);
 	const message = updateUser.info;
-   
+
 	message
 		? res.send({ message })
 		: res.status(404).send({ message: 'Could not update User' });
@@ -76,15 +78,22 @@ app.put('/users/:id', cors(corsOptions), async (req, res) => {
 
 // app.delete()
 app.delete('/users/:id', cors(corsOptions), async (req, res) => {
-    const userId = req.params['id'];
-		const [response] = await dbconnection.query(
-			` DELETE FROM users WHERE id = ? `,
-			[userId]
-		);
-        
-		const body = response;
-		body ? res.send(body) : res.status(404).send({ message: 'User Not Found' });
-})
+	const userId = req.params['id'];
+	const [response] = await dbconnection.query(
+		` DELETE FROM users WHERE id = ? `,
+		[userId]
+	);
+
+	const body = response;
+	body ? res.send(body) : res.status(404).send({ message: 'User Not Found' });
+});
+
+
+// Global error handling
+app.use((err, req, res, next) => {
+	console.error(err.stack);
+	res.status(500).send('Something broke!');
+});
 
 
 app.listen(PORT, () => {
