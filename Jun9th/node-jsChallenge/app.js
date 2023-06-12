@@ -1,6 +1,6 @@
 const cors = require('cors');
 const express = require('express');
-const dbconnection = require('./DBConfig').dbconnection;
+
 
 //This path module is needed to get the string where this server is located
 const path = require('path');
