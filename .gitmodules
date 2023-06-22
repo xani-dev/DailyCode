@@ -1,3 +1,6 @@
 [submodule "Jun20/Assignments/python-challenges-1"]
 	path = Jun20/Assignments/python-challenges-1
 	url = https://github.com/xani-dev/DailyCode.git
+[submodule "Jun22/python-1-exercises"]
+	path = Jun22/python-1-exercises
+	url = https://github.com/xani-dev/DailyCode.git
