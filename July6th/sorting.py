@@ -7,7 +7,7 @@ def my_max_even(nums):
     even = []
     
     for num in nums:
-        if num%2==0:
+        if num % 2 == 0:
             even.append(num)
     return('largest even number: ',even[-1])
 
