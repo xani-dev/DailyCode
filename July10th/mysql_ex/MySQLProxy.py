@@ -5,7 +5,7 @@ class MySQLProxy(object):
     SELECT_ALL_PEOPLE = "SELECT * FROM person;"
     SELECT_A_PERSON = "SELECT * FROM person WHERE person_id = %s;"
     INSERT_PERSON = "INSERT INTO person (first_name, last_name) VALUES (%s, %s)"
-    UPDATE_PERSON = "UPDATE person SET(first_name=%s, lat_name=%s) WHERE person_id = %s"
+    UPDATE_PERSON = "UPDATE person SET first_name = %s, last_name =%s WHERE person_id =%s;"
     DELETE_PERSON = "DELETE FROM person WHERE person_id = %s;"
     
     
@@ -25,6 +25,14 @@ class MySQLProxy(object):
         retval = None
         with self.__connection.cursor(pymysql.cursors.DictCursor) as cursor:
             cursor.execute(self.INSERT_PERSON, (first_name, last_name))
+        self.__connection.commit()
+        retval = cursor.fetchall()
+        return retval
+    
+    def update_person(self, first_name, last_name, person_id):
+        retval = None
+        with self.__connection.cursor(pymysql.cursors.DictCursor) as cursor:
+            cursor.execute(self.UPDATE_PERSON, (first_name, last_name, person_id))
         self.__connection.commit()
         retval = cursor.fetchall()
         return retval
