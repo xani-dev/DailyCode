@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "my-fists-sharepoint-site-client-side-solution",
+    "id": "600da836-0d50-48a5-a969-9dde7db658b2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.4"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "My Fists Sharepoint Site description"
+      },
+      "longDescription": {
+        "default": "My Fists Sharepoint Site description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "my-fists-sharepoint-site Feature",
+        "description": "The feature that activates elements of the my-fists-sharepoint-site solution.",
+        "id": "bd145156-0f44-48ef-823f-98ecf12b5fe2",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/my-fists-sharepoint-site.sppkg"
+  }
+}
