@@ -10,20 +10,23 @@
 # 4. Create a list of these filtered results, including their name, price and star.
 #  - Save this list as a CSV file and send it to me, your CTO, Dhruv on Teams.
 
+# https://www.datacamp.com/tutorial/amazon-web-scraping-using-beautifulsoup
+
 from bs4 import BeautifulSoup
 import requests
 
-headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0", "Accept-Encoding":"gzip, deflate", "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
+HEADERS = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0", "Accept-Encoding":"gzip, deflate", "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
 
 
-request = requests.get('https://www.amazon.com/keyboard-cute/s?k=keyboard+cute', headers=headers)
+
+request = requests.get('https://www.amazon.com/keyboard-cute/s?k=keyboard+cute', headers=HEADERS)
 content = request.content
 soup = BeautifulSoup(content, features='html.parser')
 # print(soup)
 
 
-# prices = soup.find_all('span', attrs={'class':'a-price'})
-prices = soup.find_all('span', attrs={'class':'a-offscreen'})
+prices = soup.find_all('span', attrs={'class':'a-price'})
+# prices = soup.find_all('span', attrs={'class':'a-offscreen'})
 
 for price in prices:
     print(price.text)
